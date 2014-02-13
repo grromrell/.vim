@@ -1,4 +1,4 @@
-set runtimepath+=~/git_projects/.vim
+set runtimepath+=~/git/.vim
 execute pathogen#infect()
 
 syntax on
@@ -19,3 +19,4 @@ au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 
 nnoremap <F5> :GundoToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
