@@ -8,13 +8,16 @@ filetype indent plugin on
 
 set modeline
 set background=dark
+set wildmode=longest,list,full
+set wildmenu
+set number
+
+"python spacing settings"
 set tabstop=8
 set expandtab
 set shiftwidth=4
 set softtabstop=4
-set wildmode=longest,list,full
-set wildmenu
-set number
+set autoindent
 
 "supertab python completion"
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -32,3 +35,5 @@ let &t_te.="\e[0 q"
 
 "python syntax enable"
 let python_version_2 = 1
+
+
