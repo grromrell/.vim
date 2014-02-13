@@ -1,4 +1,5 @@
-set runtimepath+=~/git/.vim
+"change runtimepath by computer"
+set runtimepath+=~/git_projects/.vim
 execute pathogen#infect()
 
 syntax on
@@ -15,8 +16,19 @@ set wildmode=longest,list,full
 set wildmenu
 set number
 
+"supertab python completion"
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 
+"plugin mappings"
 nnoremap <F5> :GundoToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
+
+"cygwin settings"
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
+
+"python syntax enable"
+let python_version_2 = 1
