@@ -1,5 +1,5 @@
 "change runtimepath by computer"
-set runtimepath+=~/git_projects/.vim
+set runtimepath+=~/git/.vim
 execute pathogen#infect()
 
 syntax on
@@ -35,5 +35,3 @@ let &t_te.="\e[0 q"
 
 "python syntax enable"
 let python_version_2 = 1
-
-
