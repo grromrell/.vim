@@ -38,5 +38,3 @@ map <C-n> :NERDTreeToggle<CR>
 
 "python syntax enable"
 let python_version_2 = 1
-
-
