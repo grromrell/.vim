@@ -1,5 +1,5 @@
 "change runtimepath by computer"
-set runtimepath+=~/git_projects/.vim
+set runtimepath+=~/git/.vim
 execute pathogen#infect()
 
 syntax on
@@ -10,9 +10,9 @@ set modeline
 set background=dark
 set wildmode=longest,list,full
 set wildmenu
-set number
+let mapleader=","
 
-"python spacing settings"
+"pythonic spacing behavior"
 set tabstop=8
 set expandtab
 set shiftwidth=4
@@ -23,15 +23,18 @@ set autoindent
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
 
+"key mappingsn"
+inoremap jk <ESC>
+
 "plugin mappings"
 nnoremap <F5> :GundoToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
 
-"cygwin settings"
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
+"cygwin settings (only at work)"
+"let &t_ti.="\e[1 q"
+"let &t_SI.="\e[5 q"
+"let &t_EI.="\e[1 q"
+"let &t_te.="\e[0 q"
 
 "python syntax enable"
 let python_version_2 = 1
