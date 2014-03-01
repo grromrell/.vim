@@ -12,8 +12,11 @@ set background=dark
 set wildmode=longest,list,full
 set wildmenu
 set number
-set laststatus=2
 let mapleader=","
+
+"code folding"
+set foldmethod=indent
+set foldlevel=99
 
 "pythonic spacing behavior"
 set tabstop=8
@@ -23,7 +26,8 @@ set softtabstop=4
 set autoindent
 
 "load powerline"
-set runtimepath+=~/git_projects/.vim/bundle/powerline/powerline/bindings/vim
+"set runtimepath+=~/git_projects/.vim/bundle/powerline/powerline/bindings/vim"
+"set laststatus=2"
 
 "supertab python completion"
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -36,6 +40,17 @@ vmap <C-c> "+y
 "plugin mappings"
 nnoremap <F5> :GundoToggle<CR>
 map <C-n> :NERDTreeToggle<CR>
+
+"window split mappings"
+map <c-a> <c-w>v
+map <c-s> <c-w>s
+map <c-q> <c-w>q
+
+"window movement mappings"
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
 
 "cygwin settings (only at work)"
 let &t_ti.="\e[1 q"
