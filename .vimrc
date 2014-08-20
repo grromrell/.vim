@@ -25,10 +25,6 @@ set shiftwidth=4
 set softtabstop=4
 set autoindent
 
-"load powerline"
-"set runtimepath+=~/git_projects/.vim/bundle/powerline/powerline/bindings/vim"
-"set laststatus=2"
-
 "supertab python completion"
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType = "context"
@@ -39,7 +35,6 @@ vmap <C-c> "+y
 
 "plugin mappings"
 nnoremap <F5> :GundoToggle<CR>
-map <C-n> :NERDTreeToggle<CR>
 
 "window split mappings"
 map <c-a> <c-w>v
@@ -60,3 +55,7 @@ let &t_te.="\e[0 q"
 
 "python syntax enable"
 let python_version_2 = 1
+
+"pydoc settings"
+let g:pydoc_cmd = 'python -m pydoc'
+let g:pydoc_opem_cmd = 'tabnew'
