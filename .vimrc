@@ -36,26 +36,20 @@ vmap <C-c> "+y
 "plugin mappings"
 nnoremap <F5> :GundoToggle<CR>
 
-"window split mappings"
-map <c-a> <c-w>v
-map <c-s> <c-w>s
-map <c-q> <c-w>q
-
-"window movement mappings"
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
-"cygwin settings (only at work)"
-let &t_ti.="\e[1 q"
-let &t_SI.="\e[5 q"
-let &t_EI.="\e[1 q"
-let &t_te.="\e[0 q"
-
 "python syntax enable"
 let python_version_2 = 1
 
 "pydoc settings"
 let g:pydoc_cmd = 'python -m pydoc'
 let g:pydoc_opem_cmd = 'tabnew'
+
+"terminal pasting"
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+set showmode
+
+"cygwin settings (only at work)"
+let &t_ti.="\e[1 q"
+let &t_SI.="\e[5 q"
+let &t_EI.="\e[1 q"
+let &t_te.="\e[0 q"
